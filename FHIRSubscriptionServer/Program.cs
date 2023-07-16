@@ -1,3 +1,4 @@
+using FHIRSubscritionServer.Controllers;
 using FHIRSubscritionServer.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddControllers().AddApplicationPart(typeof(BundleController).Assembly).AddControllersAsServices();
 
 var app = builder.Build();
 
@@ -25,6 +27,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.MapControllers();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 

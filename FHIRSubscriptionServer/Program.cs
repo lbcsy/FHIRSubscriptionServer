@@ -1,5 +1,5 @@
-using FHIRSubscritionServer.Controllers;
-using FHIRSubscritionServer.Data;
+using FHIRSubscriptionServer.Controllers;
+using FHIRSubscriptionServer.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 

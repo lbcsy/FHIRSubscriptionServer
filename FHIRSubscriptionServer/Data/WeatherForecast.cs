@@ -1,4 +1,4 @@
-namespace FHIRSubscritionServer.Data
+namespace FHIRSubscriptionServer.Data
 {
     public class WeatherForecast
     {
